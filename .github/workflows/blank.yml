@@ -1,0 +1,24 @@
+# Definindo o nome do meu Workflow
+name: Workflow Devops
+
+# Definindo quando meu workflow é disparado.
+on:
+  push:
+    branches: [ "main" ]
+    
+# Definindo os jobs que o workflow executará
+jobs:
+  jobs01:
+    name: Executando job de teste
+    runs-on: self-hosted
+    steps:
+     - name: steps 1
+       uses: actions/checkout@v4
+       
+     - name: steps 2
+       run: echo Olá Galera do Devops!
+        
+     - name: steps 3
+       run: echo Olá Galera do Devops da steps 33!
+
+     
